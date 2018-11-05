@@ -5,34 +5,20 @@ html(lang = "ru")
         title Седона
         link(rel="stylesheet" href="style.css")
     body
-        header(class="page-header-small")
-            nav(class="small-nav")
-                div(class="small-nav__wrapper")
-                    ul(class="small-nav__list site-list")
-                        li(class="site-list__item")
-                            a Главная
-                            button(class="small-nav__button" type="button")
-                        li(class="site-list__item")
-                            a Фото и видео
-                        li(class="site-list__item")
-                            a Форма отзыва
-                        li(class="site-list__item")
-                            a HTML ACADEMY
-
-            nav(class="page-header-big")
-                div(class="main-nav__wrapper")
-                    ul(class="main-nav__list site-list")
-                        li(class="site-list__item")
-                            a(href="#") Главная
-                        li(class="site-list__item")
-                            a(href="#") Главная
-                        li(class="site-list__item main-nav__logo")
-                            a(href="#")
-                                img(src="")
-                        li(class="site-list__item")
-                            a(href="#") Главная
-                        li(class="site-list__item")
-                            a(href="#") Главная
+        header(class="page-header")
+            nav(class="main-nav")
+                ul(class="main-nav__items site-list")
+                    li(class="main-nav__item")
+                        a(class="main-nav__link" href="#") Главная
+                    li(class="main-nav__item")
+                        a(class="main-nav__link" href="#") Фото и видео
+                    li(class="main-nav__item main-nav__logo")
+                        a(class="main-nav__link" href="#")
+                            img(src="")
+                    li(class="main-nav__item")
+                        a(class="main-nav__link" href="#") Форма отзыва
+                    li(class="main-nav__item")
+                        a(class="main-nav__link" href="#") HTML Academy
 
         main(class="page-main")
             section(class="welcome")
