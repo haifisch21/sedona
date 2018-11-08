@@ -4,6 +4,7 @@ html(lang = "ru")
         meta(charset="utf-8")
         title Седона
         link(rel="stylesheet" href="style.css")
+        meta(name="viewport" content="device-width, initial-scale=1")
     body
         header(class="page-header")
             nav(class="main-nav")
@@ -12,69 +13,72 @@ html(lang = "ru")
                         a(class="main-nav__link" href="#") Главная
                     li(class="main-nav__item")
                         a(class="main-nav__link" href="#") Фото и видео
-                    li(class="main-nav__item main-nav__logo")
+                    li(class="main-nav__item")
                         a(class="main-nav__link" href="#")
-                            img(src="")
+                            img(class="main-nav__logo" src="img/sedona-logo.png")
                     li(class="main-nav__item")
                         a(class="main-nav__link" href="#") Форма отзыва
                     li(class="main-nav__item")
                         a(class="main-nav__link" href="#") HTML Academy
 
+
         main(class="page-main")
             section(class="welcome")
                 div(class="welcome-image")
                     div(class="welcome-image__background")
-                        div(class="welcome-image__content")
+                        img(class="welcome-image__content css-adaptive" src="img/text-index.png")
 
             section(class="cause")
                 header(class="cause__header")
                     h1(class="visually-hidden") Седона - лучший город в Аризоне.
-                    b(class="cause__slogan") СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!
+                    b(class="cause__slogan") СЕДОНА — небольшой городок в Аризоне, <br> заслуживающий большего!
                     p(class="cause__intro") Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
 
                 div(class="cause-first")
                     div(class="cause-content cause-content--white")
-                        h3(class="cause__title") НАСТОЯЩИЙ ГОРОДОК
+                        h3(class="cause__title") НАСТОЯЩИЙ <br> ГОРОДОК
                         p(class="cause__number") — №1 —
                         p(class="cause__text") СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
                     div(class="cause-image")
+                        img(class="cause-image__city css-adaptive" src="img/photo-city1.jpg")
 
                 div(class="merits")
                     div(class="merits-block")
-                        img(src="")
+                        img(class="merits-block__img " src="img/icon-house.png")
                         b(class="merits-block__title") Жилье
                         p(class="merits-block__subtitle") Рекомендуем пожить в настоящем <br> мотеле, все как в кино!
                     div(class="merits-block")
-                        img(src="")
+                        img(class="merits-block__img" src="img/icon-burger.png")
                         b(class="merits-block__title")  ЕДА
-                        p(class="merits-block__subtitle") Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!
+                        p(class="merits-block__subtitle") Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, <br> Вы НЕ разочаруетесь!
                     div(class="merits-block")
-                        img(src="")
+                        img(class="merits-block__img" src="img/icon-gift.png")
                         b(class="merits-block__title") СУВЕНИРЫ
-                        p(class="merits-block__subtitle") Не только китайского, но и местного производства!
+                        p(class="merits-block__subtitle") Не только китайского,<br> но и местного производства!
 
                 div(class="cause-second")
                     div(class="cause-image")
+                        img(class="cause-image__bridge css-adaptive" src="img/photo-bridge.jpg")
                     div(class="cause-content cause-content--white")
-                        h3(class="cause__title") ТАМ ЕСТЬ мост дьявола
+                        h3(class="cause__title") ТАМ ЕСТЬ <br> мост дьявола
                         p(class="cause__number") — №2 —
                         p(class="cause__text") Да, по нему можно пройти! Если вы осмелитесь, конечно
 
                 div(class="cause-remaining")
                     div(class="cause-block")
-                        b(class="cause-block__title") НЕБОЛЬШАЯ ПЛОЩАДЬ
+                        b(class="cause-block__title") НЕБОЛЬШАЯ <br> ПЛОЩАДЬ
                         p(class="cause-block__number") — №3 —
-                        p(class="cause-block__text") ВСЕ интересные места находятся очень близко
+                        p(class="cause-block__text") ВСЕ интересные места находятся очень <br> близко
 
                     div(class="cause-block")
-                        b(class="cause-block__title") КРАСИВАЯ ДОРОГА
+                        b(class="cause-block__title") КРАСИВАЯ <br> ДОРОГА
                         p(class="cause-block__number") — №4 —
-                        p(class="cause-block__text") ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!
+                        p(class="cause-block__text") ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем <br> НЕ СКУЧНО!
 
                     div(class="cause-block")
-                        b(class="cause-block__title") МАЛО ТУРИСТОВ
+                        b(class="cause-block__title") МАЛО <br> ТУРИСТОВ
                         p(class="cause-block__number") — №5 —
-                        p(class="cause-block__text") Большинство едет в гранд каньон и толпится там
+                        p(class="cause-block__text") Большинство едет в гранд каньон и <br> толпится там
 
             section(class="hotel")
                 div(class="hotel__wrapper")
@@ -94,13 +98,13 @@ html(lang = "ru")
                 div(class="page-footer__social social")
                     ul(class="social-list")
                         li(class="social-item")
-                            a(class="social__link social__link--twitter" href="#")
+                            a(class="social__link" href="#")
                                 img(class="social__image social__image--twitter")
                         li(class="social-item")
-                            a(class="social__link social__link--facebook" href="#")
+                            a(class="social__link" href="#")
                                 img(class="social__image social__image--facebook")
                         li(class="social-item")
-                            a(class="social__link social__link--youtube" href="#")
+                            a(class="social__link" href="#")
                                 img(class="social__image social__image--youtube")
 
                 div(class="page-footer__copyright copyright")
