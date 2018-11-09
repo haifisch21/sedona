@@ -234,17 +234,53 @@ body {
   }
 }
 
-.page-footer__wrapper{
+.page-footer__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 2em;
+  background: $bg-color-white;
+  margin-top: -5px;
 
-  .contacts__title{
+  .contacts__title {
     color: black;
     font-size: 21px;
     font-weight: bold;
-    
+    padding-top: 100px;
+  }
+
+  .social-list {
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+
+    .social-item {
+      list-style: none;
+      width: 45px;
+      height: 45px;
+      background: $bg-color-blue;
+      margin: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .copyright-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: -5px;
+  }
+
+  .copyright__link{
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright-item--position{
+    padding-top: 5%;
+    padding-right: 10px;
   }
 }
 
