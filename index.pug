@@ -5,131 +5,106 @@ html(lang = "ru")
         title Седона
         link(rel="stylesheet" href="style.css")
         meta(name="viewport" content="device-width, initial-scale=1")
-        meta(name="viewport" content='width=1200')
         include bemto/bemto.pug
-                       
+
     body
-        header(class="page-header")
-            nav(class="main-nav")
-                ul(class="main-nav__items site-list")
-                    li(class="main-nav__item")
-                        a(class="main-nav__link" href="#") Главная
-                    li(class="main-nav__item")
-                        a(class="main-nav__link" href="#") Фото и видео
-                    li(class="main-nav__item")
-                        a(class="main-nav__link" href="#") Форма отзыва
-                    li(class="main-nav__item")
-                        a(class="main-nav__link" href="#") HTML Academy
-                div(class="main-nav__logo")
-                    a(class="main-nav__link" href="#")
-                        img(class="main-nav__logo" src="img/sedona-logo.png")
+        +b.HEADER.page-header
+            +b.NAV.main-nav
+                +e.UL.items.site-list
+                    +e.LI.item
+                        +e.A(href="#").link Главная
+                    +e.LI.item
+                        +e.A(href="#").link Фото и видео
+                    +e.LI.item
+                        +e.A(href="#").link Форма отзыва
+                    +e.LI.item
+                        +e.A(href="#").link HTML Academy
+                +e.logo
+                    +e.A(href="#").link
+                        +e.IMG(src="img/sedona-logo.png").image
 
+        +b.MAIN.page-main
+            +b.welcome
+                +b.welcome-image
+                    +e.background
+                        +e.IMG(src="img/text-index.png").content
 
-        main(class="page-main")
-            section(class="welcome")
-                div(class="welcome-image")
-                    div(class="welcome-image__background")
-                        img(class="welcome-image__content css-adaptive" src="img/text-index.png")
+            +b.cause
+                +e.HEADER.header
+                    +e.B.slogan СЕДОНА — небольшой городок в Аризоне, <br> заслуживающий большего!
+                    +e.P.intro Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
 
-            section(class="cause")
-                header(class="cause__header")
-                    h1(class="visually-hidden") Седона - лучший город в Аризоне.
-                    b(class="cause__slogan") СЕДОНА — небольшой городок в Аризоне, <br> заслуживающий большего!
-                    p(class="cause__intro") Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+                +b.cause-first
+                    +b.cause-content
+                        +e.H3.title НАСТОЯЩИЙ <br> ГОРОДОК
+                        +e.P.number — №1 —
+                        +e.P.text СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+                    +b.cause-image
+                        +e.IMG(src="img/photo-city1.jpg").city
 
+                +b.merits
+                    +b.merits-block
+                        +e.IMG(src="img/icon-house.png").img
+                        +e.title Жилье
+                        +e.subtitle Рекомендуем пожить в настоящем <br> мотеле, все как в кино!
+                    +b.merits-block
+                        +e.IMG(src="img/icon-burger.png").img
+                        +e.title  ЕДА
+                        +e.subtitle Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, <br> Вы НЕ разочаруетесь!
+                    +b.merits-block
+                        +e.IMG(src="img/icon-gift.png").img
+                        +e.title СУВЕНИРЫ
+                        +e.subtitle Не только китайского,<br> но и местного производства!
 
+                +b.cause-second
+                    +b.cause-image
+                        +e.IMG(src="img/photo-bridge.jpg").bridge
+                    +b.cause-content
+                        +e.H3.title ТАМ ЕСТЬ <br> мост дьявола
+                        +e.P.number — №2 —
+                        +e.P.text Да, по нему можно пройти! <br> Если вы осмелитесь, конечно
 
-                div(class="cause-first")
-                    div(class="cause-content cause-content--white")
-                        h3(class="cause__title") НАСТОЯЩИЙ <br> ГОРОДОК
-                        p(class="cause__number") — №1 —
-                        p(class="cause__text") СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-                    div(class="cause-image")
-                        img(class="cause-image__city css-adaptive" src="img/photo-city1.jpg")
-
-                div(class="merits")
-                    div(class="merits-block")
-                        img(class="merits-block__img " src="img/icon-house.png")
-                        b(class="merits-block__title") Жилье
-                        p(class="merits-block__subtitle") Рекомендуем пожить в настоящем <br> мотеле, все как в кино!
-                    div(class="merits-block")
-                        img(class="merits-block__img" src="img/icon-burger.png")
-                        b(class="merits-block__title")  ЕДА
-                        p(class="merits-block__subtitle") Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, <br> Вы НЕ разочаруетесь!
-                    div(class="merits-block")
-                        img(class="merits-block__img" src="img/icon-gift.png")
-                        b(class="merits-block__title") СУВЕНИРЫ
-                        p(class="merits-block__subtitle") Не только китайского,<br> но и местного производства!
-
-                div(class="cause-second")
-                    div(class="cause-image")
-                        img(class="cause-image__bridge css-adaptive" src="img/photo-bridge.jpg")
-                    div(class="cause-content cause-content--white")
-                        h3(class="cause__title") ТАМ ЕСТЬ <br> мост дьявола
-                        p(class="cause__number") — №2 —
-                        p(class="cause__text") Да, по нему можно пройти! Если вы осмелитесь, конечно
-
-                div(class="cause-remaining")
-                    div(class="cause-block")
-                        b(class="cause-block__title") НЕБОЛЬШАЯ <br> ПЛОЩАДЬ
-                        p(class="cause-block__number") — №3 —
-                        p(class="cause-block__text") ВСЕ интересные места находятся очень <br> близко
-
-                    div(class="cause-block")
-                        b(class="cause-block__title") КРАСИВАЯ <br> ДОРОГА
-                        p(class="cause-block__number") — №4 —
-                        p(class="cause-block__text") ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем <br> НЕ СКУЧНО!
-
-                    div(class="cause-block")
-                        b(class="cause-block__title") МАЛО <br> ТУРИСТОВ
-                        p(class="cause-block__number") — №5 —
-                        p(class="cause-block__text") Большинство едет в гранд каньон и <br> толпится там
-
+                +b.cause-remaining
+                    +b.cause-block(id="cause-block-first")
                         
-            section(class="hotel")
-                div(class="hotel__wrapper")
-                    h3(class="hotel__title") ЗАИНТЕРЕСОВАЛИСЬ?
-                    p(class="hotel__subtitle") Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне
-                    button(class="hotel__button" type="button") Найти гостиницу
 
-    section(class="map")
-        div(class="map__wrapper")
-            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209540.70924160766!2d-111.93521836093215!3d34.85437839969334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1541168200835" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
-
-        footer(class="page-footer")
-            div(class="page-footer__wrapper")
-                div(class="visited  contacts")
-                    b(class="contacts__title") #visitSEDONA
-
-                div(class="page-footer__social social")
-                    ul(class="social-list")
-                        li(class="social-item")
-                            a(class="social__link" href="#")
-                                img(class="social__image social__image--twitter" src="img/icon-twitter.png")
-                        li(class="social-item")
-                            a(class="social__link" href="#")
-                                img(class="social__image social__image--facebook" src="img/icon-facebook.png")
-                        li(class="social-item")
-                            a(class="social__link" href="#")
-                                img(class="social__image social__image--youtube" src="img/icon-youtube.png")
-
-                div(class="page-footer__copyright copyright")
-                    ul(class="copyright-list")
-                        li(class="copyright-item copyright-item--position")
-                            a(class="copyright__link" href="#") Разработано
-                        li(class="copyright-item ")
-                            img(class="copyright__image " src="img/htmlacademy.png")
+                    +b.cause-block(id="cause-block-second")
 
 
-                    
+                    +b.cause-block(id="cause-block-third")
 
+            +b.hotel
+                +b.hotel-block
+                    +e.H3.title ЗАИНТЕРЕСОВАЛИСЬ?
+                    +e.P.subtitle Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне
+                    +e.BUTTON(type="button").button Найти гостиницу
 
+    +b.map
+        +b.map-block
+            +e.IFRAME(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209540.70924160766!2d-111.93521836093215!3d34.85437839969334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1541168200835" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
 
-                            
+        +b.page-footer
+            +b.footer-block
+                +b.footer-contacts
+                    +e.B.title #VISITSEDONA
 
-                
+                +b.footer-social
+                    +e.UL.items
+                        +e.LI.item
+                            +e.A(href="#").link
+                                +e.IMG(src="img/icon-twitter.png").image.social__image--twitter
+                        +e.LI.item
+                            +e.A(href="#").link
+                                +e.IMG(src="img/icon-facebook.png").image.social__image--facebook
+                        +e.LI.item
+                            +e.A(href="#").link
+                                +e.IMG(src="img/icon-youtube.png").image.social__image--youtube
 
-                    
+                +b.footer-copyright
+                    +e.UL.items
+                        +e.LI.item.copyright-item--position
+                            +e.A(href="#").link Разработано
+                        +e.LI.item
+                            +e.IMG(src="img/htmlacademy.png").image
 
-                    
-                        
+    script(src="script.js")
