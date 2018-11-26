@@ -15,6 +15,7 @@ body {
 
 .page-header {
   background: $bg-color-white;
+
 }
 
 .page-wrapper {
@@ -46,15 +47,13 @@ body {
     display: flex;
     flex-wrap: nowrap;
     white-space: nowrap;
+    width: 20%;
+    justify-content: space-around;
 
   }
 
   &__item:nth-child(2){
-    margin-right: 5rem;
-  }
-
-  &__item:nth-child(3){
-    margin-left: 5rem;
+    margin-right: 20%;
   }
 
   &__logo {
@@ -102,7 +101,9 @@ main {
   background-color: $bg-color-white;
 
   &__slogan {
+    @include robotoBold;
     font-size: 2.1rem;
+
   }
 
   &__intro {
@@ -110,16 +111,6 @@ main {
     font-size: 1.4rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
-  }
-
-  &__title {
-    font-size: 2.1rem;
-    //@include roboto-bold;
-  }
-
-  &__text {
-    font-size: 1.4rem;
-    //@include roboto-italic;
   }
 }
 
@@ -130,21 +121,33 @@ main {
 .cause-first {
   display: flex;
   flex-direction: row;
+
 }
 
 .cause-content {
   flex: 1;
-  padding-top: 2rem;
   background-color: $bg-color-blue;
   color: $bg-color-white;
-  height: auto;
+  height: 23.6rem;
+  padding-top: 2rem;
+
+  &__title{
+    font-size: 2.1rem;
+  }
+
+  &__number{
+    font-size: 1.4rem;
+  }
+
+  &__text{
+    font-size: 1.4rem;
+  }
 }
 
 .cause-image {
   flex: 2;
   position: relative;
   width: 100%;
-  height: auto;
 }
 
 .merits {
@@ -157,22 +160,25 @@ main {
 .merits-block {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
+  margin-top: 3rem;
 
   &__img {
     width: 6.3rem;
     margin: 0 auto;
     height: 6rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
   }
 
   &__title {
     font-size: 2.1rem;
-    //@include roboto-bold;
-    padding-bottom: 1rem;
+    @include robotoBold;
+    padding-bottom: 2.8rem;
+
   }
   &__subtitle {
     font-size: 1.4rem;
+    width: 30rem;
   }
 }
 
@@ -180,13 +186,6 @@ main {
   display: flex;
   flex-direction: row;
   margin-bottom: -0.3rem;
-}
-
-.cause-content {
-  padding-top: 2rem;
-  background-color: $bg-color-blue;
-  color: $bg-color-white;
-  flex: 1;
 }
 
 .cause-image {
@@ -199,7 +198,6 @@ main {
   justify-content: space-around;
   background: $bg-color-dark;
   padding-top: 2rem;
-
 }
 
 .cause-block {
@@ -209,15 +207,19 @@ main {
     color: $color-black;
     font-size: 2.1rem;
     width: 13rem;
-    //@include roboto-bold;
+    @include robotoBold;
+    padding-top: 4.8rem;
   }
   &__number{
-    
+    font-size: 1.4rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
   }
   &__content {
     color: $color-small-text;
     font-size: 1.4rem;
     width: 30rem;
+    padding-bottom: 7rem;
   }                                      
 }
 
@@ -235,7 +237,7 @@ main {
   &__title {
     font-size: 2.1rem;
     color: $color-black;
-    //@include roboto-bold;
+    @include robotoBold;
   }
 
   &__subtitle {
@@ -269,13 +271,15 @@ iframe {
   margin-top: -.5rem;
   flex-wrap: wrap;
 }
+.footer-contacts{
+  margin-top: 1.5rem;
 
-.footer-contacts__title {
-  color: $color-black;
-  font-size: 21px;
-  //@include roboto-bold;
-  padding-top: 10rem;
+  &__title {
+    color: $color-black;
+    font-size: 21px;
+  }
 }
+
 
 .footer-social {
 
@@ -297,28 +301,15 @@ iframe {
   }
 }
 
-.footer-social {
-
-  &__items {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    margin-top: -.5rem;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: $color-black;
-  }
-}
-
 .copyright-item--position {
   padding-top: 1rem;
   padding-right: 1rem;
+  @include robotoBold;
+  font-size: 1.4rem;
 }
 
 .footer-copyright {
-
+  margin-top: 1.5rem;
   &__items {
     display: flex;
     list-style: none;
