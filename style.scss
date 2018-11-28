@@ -1,5 +1,6 @@
 @import "variables.scss";
 @import "fonts.scss";
+@import "mixins.scss";
 
 html {
   font-size: 62.5%;
@@ -9,13 +10,11 @@ body {
   background: $bg-color-dark;
   margin: 0 auto;
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
-
+  font-family: Roboto, sans-serif;
 }
 
 .page-header {
   background: $bg-color-white;
-
 }
 
 .page-wrapper {
@@ -39,7 +38,6 @@ body {
     flex-wrap: nowrap;
     padding-top: 2.3rem;
     padding-bottom: 4rem;
-
   }
 
   &__item {
@@ -49,10 +47,9 @@ body {
     white-space: nowrap;
     width: 20%;
     justify-content: space-around;
-
   }
 
-  &__item:nth-child(2){
+  &__item:nth-child(2) {
     margin-right: 20%;
   }
 
@@ -67,11 +64,9 @@ body {
     color: $color-black;
     text-decoration: none;
     display: block;
-    font-family: 'Roboto-bold', sans-serif;
     font-size: 14px;
     font-weight: 700;
   }
-
 }
 
 main {
@@ -83,7 +78,6 @@ main {
   &__background {
     background: url("img/back-desktop.jpg") no-repeat;
     background-size: 100%;
-
   }
 
   &__content {
@@ -101,9 +95,7 @@ main {
   background-color: $bg-color-white;
 
   &__slogan {
-    @include robotoBold;
-    font-size: 2.1rem;
-
+    @include bold;
   }
 
   &__intro {
@@ -114,14 +106,9 @@ main {
   }
 }
 
-.causeList{
-  
-}
-
 .cause-first {
   display: flex;
   flex-direction: row;
-
 }
 
 .cause-content {
@@ -131,15 +118,15 @@ main {
   height: 23.6rem;
   padding-top: 2rem;
 
-  &__title{
+  &__title {
     font-size: 2.1rem;
   }
 
-  &__number{
+  &__number {
     font-size: 1.4rem;
   }
 
-  &__text{
+  &__text {
     font-size: 1.4rem;
   }
 }
@@ -171,11 +158,11 @@ main {
   }
 
   &__title {
+    @include bold;
     font-size: 2.1rem;
-    @include robotoBold;
     padding-bottom: 2.8rem;
-
   }
+
   &__subtitle {
     font-size: 1.4rem;
     width: 30rem;
@@ -203,24 +190,26 @@ main {
 .cause-block {
 
   &__title {
+    @include bold;
     margin: 0 auto;
     color: $color-black;
     font-size: 2.1rem;
     width: 13rem;
-    @include robotoBold;
     padding-top: 4.8rem;
   }
-  &__number{
+
+  &__number {
     font-size: 1.4rem;
     padding-top: 2rem;
     padding-bottom: 3rem;
   }
+
   &__content {
     color: $color-small-text;
     font-size: 1.4rem;
     width: 30rem;
     padding-bottom: 7rem;
-  }                                      
+  }
 }
 
 .hotel {
@@ -235,9 +224,9 @@ main {
   padding-bottom: 2rem;
 
   &__title {
+    @include bold;
     font-size: 2.1rem;
     color: $color-black;
-    @include robotoBold;
   }
 
   &__subtitle {
@@ -250,7 +239,7 @@ main {
     background: $bg-color-blue;
     color: $bg-color-white;
     font-size: 2.1rem;
-    //@include roboto-bold;
+    //
     font-family: "PT Sans", sans-serif;
     padding: 1rem 15rem;
     border: none;
@@ -271,7 +260,8 @@ iframe {
   margin-top: -.5rem;
   flex-wrap: wrap;
 }
-.footer-contacts{
+
+.footer-contacts {
   margin-top: 1.5rem;
 
   &__title {
@@ -279,7 +269,6 @@ iframe {
     font-size: 21px;
   }
 }
-
 
 .footer-social {
 
@@ -301,21 +290,26 @@ iframe {
   }
 }
 
-.copyright-item--position {
-  padding-top: 1rem;
-  padding-right: 1rem;
-  @include robotoBold;
-  font-size: 1.4rem;
+.copyright-item {
+
+  &--position {
+    @include bold;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    font-size: 1.4rem;
+  }
 }
 
 .footer-copyright {
   margin-top: 1.5rem;
+
   &__items {
     display: flex;
     list-style: none;
     flex-direction: row;
     margin-top: 0;
   }
+
   &__link {
     text-decoration: none;
     color: $color-black;

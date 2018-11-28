@@ -1,27 +1,41 @@
-@mixin robotoNormal {
-  font-family: 'Roboto', sans-serif;
+@font-face {
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url('/fonts/Robotobold.woff2') format('woff2'), url('/fonts/Robotobold.woff') format('woff'), url('/fonts/Robotobold.ttf') format('truetype');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('/fonts/Robotobold.woff2') format('woff2'),
+  url('/fonts/Robotobold.woff') format('woff'),
+  url('/fonts/Robotobold.ttf') format('truetype');
 }
 
-@mixin robotoBold {
-  font-family: 'Roboto', sans-serif;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url('/fonts/Robotobold.woff2') format('woff2'), url('/fonts/Robotobold.woff') format('woff'), url('/fonts/Robotobold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@mixin robotoItalic{
-  font-family: 'Roboto', sans-serif;
-  src: local('Roboto Italic'), local('Roboto-Italic'), url('/fonts/Robotoitalic.woff2') format('woff2'), url('/fonts/Robotoitalic.woff') format('woff'), url('/fonts/Robotoitalic.ttf') format('truetype');
+@font-face{
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: italic;
+  src: local('Roboto Italic'), local('Roboto-Italic'),
+  url('/fonts/Robotoitalic.woff2') format('woff2'),
+  url('/fonts/Robotoitalic.woff') format('woff'),
+  url('/fonts/Robotoitalic.ttf') format('truetype');
 }
 
-@mixin robotoBoldItalic{
-  font-family: 'Roboto', sans-serif;
-  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('/fonts/Robotobolditalic.woff2') format('woff2'), url('/fonts/Robotobolditalic.woff') format('woff'), url('/fonts/Robotobolditalic.ttf') format('truetype');
+@font-face {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+  url('/fonts/Robotobold.woff2') format('woff2'),
+  url('/fonts/Robotobold.woff') format('woff'),
+  url('/fonts/Robotobold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: Roboto, sans-serif;
   font-weight: 700;
   font-style: italic;
+  src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'),
+  url('/fonts/Robotobolditalic.woff2') format('woff2'),
+  url('/fonts/Robotobolditalic.woff') format('woff'),
+  url('/fonts/Robotobolditalic.ttf') format('truetype');
 }
+
+

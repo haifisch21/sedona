@@ -1,0 +1,11 @@
+@mixin italic {
+  font: 400 italic 1.4rem/1.75 Roboto;
+}
+
+@mixin bold {
+  font: 700 2.1rem/1.25 Roboto;
+}
+
+@mixin bold-italic{
+  font: 700 italic 2.1rem/1.75 Roboto;
+}
