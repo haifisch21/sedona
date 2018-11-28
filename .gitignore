@@ -2,3 +2,4 @@
 *.html
 prepros-6.config
 .idea
+.DS_Store
