@@ -7,7 +7,7 @@ html(lang = "ru")
         meta(charset="utf-8")
         title Седона
         link(rel="stylesheet" href="style.css")
-        meta(name="viewport" content="device-width, initial-scale=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1" )
     doctype html
     body
     +b.container
@@ -36,16 +36,16 @@ html(lang = "ru")
                     +e.P.number — №1 —
                     +e.P.text СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
                 +b.cause-image
-                    +e.IMG(src="/img/photo-city1.jpg").city
+                    +e.IMG(src="/img/photo-city1.jpg").attractions
             +b.merits
                 each item in mertisList
                     +b.merits-block
                         +e.IMG(src="/img/" + item.img).img
                         +e.title=item.title
                         +e.subtitle=item.caption
-            +b.cause-second
+            +b.cause-first
                 +b.cause-image
-                    +e.IMG(src="/img/photo-bridge.jpg").bridge
+                    +e.IMG(src="/img/photo-bridge.jpg").attractions
                 +b.cause-content
                     +e.H3.title ТАМ ЕСТЬ <br> мост дьявола
                     +e.P.number — №2 —

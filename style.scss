@@ -8,310 +8,477 @@ html {
 
 body {
   background: $bg-color-dark;
-  margin: 0 auto;
+  margin: 0;
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
 }
 
-.page-header {
-  background: $bg-color-white;
-}
+@media (min-width: 320px) {
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.site-list {
-  margin: 0;
-  padding: 0;
-}
-
-.main-nav {
-  margin-bottom: -1.3rem;
-  margin-top: -1rem;
-
-  &__items {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    padding-top: 2.3rem;
-    padding-bottom: 4rem;
+  .page-header {
+    background: $bg-color-white;
+    height: 5rem;
   }
 
-  &__item {
-    list-style: none;
-    display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    width: 20%;
-    justify-content: space-around;
-  }
-
-  &__item:nth-child(2) {
-    margin-right: 20%;
-  }
-
-  &__logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
-  }
-
-  &__link {
-    color: $color-black;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-  }
-}
-
-main {
-  width: 100%;
-}
-
-.welcome-image {
-
-  &__background {
-    background: url("img/back-desktop.jpg") no-repeat;
-    background-size: 100%;
-  }
-
-  &__content {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-.cause {
-  padding-top: 3rem;
-  text-align: center;
-  background-color: $bg-color-white;
-
-  &__slogan {
-    @include bold;
-  }
-
-  &__intro {
-    color: $color-small-text;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-  }
-}
-
-.cause-first {
-  display: flex;
-  flex-direction: row;
-}
-
-.cause-content {
-  flex: 1;
-  background-color: $bg-color-blue;
-  color: $bg-color-white;
-  height: 23.6rem;
-  padding-top: 2rem;
-
-  &__title {
-    font-size: 2.1rem;
-  }
-
-  &__number {
-    font-size: 1.4rem;
-  }
-
-  &__text {
-    font-size: 1.4rem;
-  }
-}
-
-.cause-image {
-  flex: 2;
-  position: relative;
-  width: 100%;
-}
-
-.merits {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 3.7rem;
-}
-
-.merits-block {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 6rem;
-  margin-top: 3rem;
-
-  &__img {
-    width: 6.3rem;
+  .container {
     margin: 0 auto;
-    height: 6rem;
-    padding-bottom: 3rem;
+    width: 100%;
   }
 
-  &__title {
-    @include bold;
-    font-size: 2.1rem;
-    padding-bottom: 2.8rem;
+  .main-nav__items {
+    visibility: hidden;
   }
 
-  &__subtitle {
-    font-size: 1.4rem;
-    width: 30rem;
-  }
-}
+  .main-nav {
+    margin-bottom: -1.3rem;
+    margin-top: -1rem;
 
-.cause-second {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: -0.3rem;
-}
 
-.cause-image {
-  flex: 2;
-}
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
 
-.cause-remaining {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background: $bg-color-dark;
-  padding-top: 2rem;
-}
-
-.cause-block {
-
-  &__title {
-    @include bold;
-    margin: 0 auto;
-    color: $color-black;
-    font-size: 2.1rem;
-    width: 13rem;
-    padding-top: 4.8rem;
+    &__image {
+      width: 16rem;
+    }
   }
 
-  &__number {
-    font-size: 1.4rem;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+  .welcome-image {
+    margin-bottom: -1rem;
+
+    &__background {
+      background: url("img/back-desktop.jpg") no-repeat;
+      background-size: 100%;
+      height: 15rem;
+    }
+
+    &__content {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      height: 10rem;
+      width: 15rem;
+    }
   }
 
-  &__content {
-    color: $color-small-text;
-    font-size: 1.4rem;
-    width: 30rem;
-    padding-bottom: 7rem;
-  }
-}
+  .cause {
+    padding-top: 3rem;
+    text-align: center;
+    background-color: $bg-color-white;
 
-.hotel {
-  background: $bg-color-white;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
+    &__slogan {
+      @include bold;
+      width: 30rem;
+      margin: 0 auto;
+    }
 
-.hotel-block {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-
-  &__title {
-    @include bold;
-    font-size: 2.1rem;
-    color: $color-black;
+    &__intro {
+      color: $color-small-text;
+      font-size: 1.4rem;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      width: 34rem;
+      margin: 0 auto;
+    }
   }
 
-  &__subtitle {
-    font-size: 1.4rem;
-    color: $color-small-text;
-    padding-bottom: 1rem;
+  .cause-first {
+    display: flex;
+    flex-direction: column;
   }
 
-  &__button {
-    background: $bg-color-blue;
+  .cause-content {
+    flex: 1;
+    background-color: $bg-color-blue;
     color: $bg-color-white;
-    font-size: 2.1rem;
-    //
-    font-family: "PT Sans", sans-serif;
-    padding: 1rem 15rem;
-    border: none;
-    cursor: pointer;
-  }
-}
-
-iframe {
-  width: 100%;
-}
-
-.footer-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 2rem;
-  background: $bg-color-white;
-  margin-top: -.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-contacts {
-  margin-top: 1.5rem;
-
-  &__title {
-    color: $color-black;
-    font-size: 21px;
-  }
-}
-
-.footer-social {
-
-  &__items {
-    display: flex;
-    flex-direction: row;
-    margin-top: -.1rem;
-  }
-
-  &__item {
-    list-style: none;
-    width: 4.5rem;
-    height: 4.5rem;
-    background: $bg-color-blue;
-    margin: .6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.copyright-item {
-
-  &--position {
-    @include bold;
     padding-top: 1rem;
-    padding-right: 1rem;
-    font-size: 1.4rem;
+    padding-bottom: 2rem;
+    max-height: 20rem;
+
+    &__title {
+      font-size: 2.1rem;
+    }
+
+    &__number {
+      font-size: 1.4rem;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+
+  .cause-image__attractions {
+    flex: 2;
+    width: 100%;
+    height: 20rem;
+    margin-bottom: -.5rem;
+  }
+
+  .merits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1rem;
+  }
+
+  .merits-block {
+    display: flex;
+    flex-direction: column;
+
+    &__img {
+      width: 6.3rem;
+      margin: 0 auto;
+      height: 6rem;
+      padding-top: 1rem;
+    }
+
+    &__title {
+      @include bold;
+      font-size: 2.1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      width: 30rem;
+      margin: 0 auto;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .cause-remaining {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: $bg-color-dark;
+    padding-top: 2rem;
+  }
+
+  .cause-block {
+
+    &__title {
+      @include bold;
+      margin: 0 auto;
+      color: $color-black;
+      font-size: 2.1rem;
+      width: 13rem;
+      padding-top: 1rem;
+    }
+
+    &__number {
+      font-size: 1.4rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    &__content {
+      color: $color-small-text;
+      font-size: 1.4rem;
+      width: 30rem;
+      margin: 0 auto;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .hotel {
+    background: $bg-color-white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotel-block {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+
+    &__title {
+      @include bold;
+      font-size: 2.1rem;
+      color: $color-black;
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      color: $color-small-text;
+      padding-bottom: 2rem;
+      width: 28rem;
+      margin: 0 auto;
+    }
+
+    &__button {
+      @include bold;
+      background: $bg-color-blue;
+      color: $bg-color-white;
+      font-size: 2.1rem;
+      padding: 1rem 8rem;
+      border: none;
+      cursor: pointer;
+      width: 28rem;
+    }
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    background: $bg-color-white;
+    justify-content: center;
+    padding-top: 2rem;
+  }
+
+  .footer-contacts {
+    margin: 0 auto;
+
+    &__title {
+      color: $color-black;
+      font-size: 21px;
+    }
+  }
+
+  .footer-social {
+    padding-top: 2rem;
+
+    &__items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      list-style: none;
+      width: 4.5rem;
+      height: 4.5rem;
+      background: $bg-color-blue;
+      margin: .6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .copyright-item {
+
+    &--position {
+      @include bold;
+      font-size: 1.4rem;
+      display: flex;
+      padding-top: .7rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .footer-copyright {
+    padding-top: 2rem;
+
+    &__items {
+      display: flex;
+      list-style: none;
+      flex-direction: row;
+      padding: 0;
+      justify-content: center;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: $color-black;
+    }
   }
 }
 
-.footer-copyright {
-  margin-top: 1.5rem;
+@media (min-width: 770px) {
 
-  &__items {
-    display: flex;
-    list-style: none;
-    flex-direction: row;
-    margin-top: 0;
+  .main-nav {
+    margin-bottom: -1.3rem;
+    margin-top: -1rem;
+    padding: 0;
+
+    &__items {
+      visibility: visible;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: nowrap;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+      padding-left: 0;
+    }
+
+    &__item {
+      list-style: none;
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      width: 20%;
+      justify-content: space-around;
+    }
+
+    &__item:nth-child(2) {
+      margin-right: 20%;
+    }
+
+    &__logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+
+    &__link {
+      color: $color-black;
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
   }
 
-  &__link {
-    text-decoration: none;
-    color: $color-black;
+  .welcome-image {
+
+    &__background {
+      height: 34rem;
+    }
+
+    &__content {
+      height: 30rem;
+      width: 35rem;
+    }
+  }
+
+  .cause {
+
+    &__slogan {
+      width: 60rem;
+      padding-top: 2rem;
+    }
+
+    &__intro {
+      width: 60rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  .cause-first {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .cause-content {
+    flex: 1;
+    height: 17rem;
+  }
+
+  .cause-image {
+    flex: 2;
+  }
+
+  .merits {
+    flex-direction: row;
+  }
+  .merits-block {
+    display: flex;
+    flex-direction: column;
+
+    &__subtitle {
+      width: 20rem;
+    }
+  }
+
+  .cause-remaining {
+    flex-direction: row;
+  }
+
+  .cause-block {
+
+    &__content {
+      width: 20rem;
+    }
+  }
+
+  .hotel {
+    background: $bg-color-white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotel-block {
+
+    &__subtitle {
+      width: 50rem;
+    }
+
+    &__button {
+
+      width: 50rem;
+    }
+  }
+
+  .footer-block {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+  }
+
+  .footer-social {
+    padding-top: 0;
+  }
+
+  .footer-copyright {
+    padding-top: 0;
+  }
+  .footer-contacts{
+    padding: 1.5rem;
+    margin: 0;
+  }
+
+  .copyright-item--position{
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container{
+    width: 1200px;
+  }
+
+  .welcome-image {
+
+    &__background {
+      height: 48rem;
+      margin-bottom: 1rem;
+    }
+
+    &__content {
+      height: 40rem;
+      width: 45rem;
+    }
+  }
+
+  .merits-block {
+
+    &__subtitle {
+      width: 30rem;
+    }
+  }
+
+  .cause-block {
+
+    &__content {
+      width: 30rem;
+    }
   }
 }
