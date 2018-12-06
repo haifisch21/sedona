@@ -1,5 +1,6 @@
 include bemto/bemto.pug
 include vars.pug
+include script.js
 
 doctype html
 html(lang = "ru")
@@ -10,74 +11,74 @@ html(lang = "ru")
         meta(name="viewport" content="width=device-width, initial-scale=1" )
     doctype html
     body
-    +b.container
-        +b.HEADER.page-header
-            +b.NAV.main-nav
-                +e.UL.items.site-list
-                    each item in navList
-                        +e.LI.item
-                            +e.A(href="#").link=item
-                +e.logo
-                    +e.A(href="#").link
-                        +e.IMG(src="/img/sedona-logo.png").image
-    +b.MAIN.page-main
-        +b.welcome
-            +b.welcome-image
-                +e.background
-                    +e.IMG(src="/img/text-index.png").content
-    +b.container
-        +b.cause
-            +e.HEADER.header
-                +e.P.slogan СЕДОНА — небольшой городок в Аризоне, <br> заслуживающий большего!
-                +e.P.intro Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
-            +b.cause-first
-                +b.cause-content
-                    +e.H3.title НАСТОЯЩИЙ <br> ГОРОДОК
-                    +e.P.number — №1 —
-                    +e.P.text СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
-                +b.cause-image
-                    +e.IMG(src="/img/photo-city1.jpg").attractions
-            +b.merits
-                each item in mertisList
-                    +b.merits-block
-                        +e.IMG(src="/img/" + item.img).img
-                        +e.title=item.title
-                        +e.subtitle=item.caption
-            +b.cause-first
-                +b.cause-image
-                    +e.IMG(src="/img/photo-bridge.jpg").attractions
-                +b.cause-content
-                    +e.H3.title ТАМ ЕСТЬ <br> мост дьявола
-                    +e.P.number — №2 —
-                    +e.P.text Да, по нему можно пройти! <br> Если вы осмелитесь, конечно
-            +b.cause-remaining
-                each item in causeList
-                    +b.cause-block
-                        +e.title=item.title
-                        +e.number=item.number
-                        +e.content=item.content
-        +b.hotel
-            +b.hotel-block
-                +e.H3.title ЗАИНТЕРЕСОВАЛИСЬ?
-                +e.P.subtitle Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне
-                +e.BUTTON(type="button").button Найти гостиницу
-    +b.map
-        +b.map-block
-            +e.IFRAME(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209540.70924160766!2d-111.93521836093215!3d34.85437839969334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1541168200835" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
-    +b.container
-        +b.page-footer
-            +b.footer-block
-                +b.footer-contacts
-                    +e.B.title #VISITSEDONA
-                +b.footer-social
-                    +e.UL.items
-                        each item in socialList
+        +b.container
+            +b.HEADER.page-header
+                +b.NAV.main-nav
+                    +e.UL.items.site-list
+                        each item in navList
                             +e.LI.item
-                                +e.A(href="#")
-                                    +e.IMG(src="/img/" + item.img).img
-                +b.footer-copyright
-                    +e.UL.items
-                        +e.LI.item.copyright-item--position
-                            +e.A(href="#").link Разработано
-                        +e.LI.item
-                            +e.IMG(src="/img/htmlacademy.png").image
+                                +e.A(href="#").link=item
+                    +e.logo
+                        +e.A(href="#").link
+                            +e.IMG(src="/img/sedona-logo.png").image
+        +b.MAIN.page-main
+            +b.welcome
+                +b.welcome-image
+                    +e.background
+                        +e.IMG(src="/img/text-index.png").content
+        +b.container
+            +b.cause
+                +e.HEADER.header
+                    +e.P.slogan СЕДОНА — небольшой городок в Аризоне, <br> заслуживающий большего!
+                    +e.P.intro Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
+                +b.cause-first
+                    +b.cause-content
+                        +e.H3.title НАСТОЯЩИЙ <br> ГОРОДОК
+                        +e.P.number — №1 —
+                        +e.P.text СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, <br> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ
+                    +b.cause-image
+                        +e.IMG(src="/img/photo-city1.jpg").attractions
+                +b.merits
+                    each item in mertisList
+                        +b.merits-block
+                            +e.IMG(src="/img/" + item.img).img
+                            +e.title=item.title
+                            +e.subtitle=item.caption
+                +b.cause-first
+                    +b.cause-image
+                        +e.IMG(src="/img/photo-bridge.jpg").attractions
+                    +b.cause-content
+                        +e.H3.title ТАМ ЕСТЬ <br> мост дьявола
+                        +e.P.number — №2 —
+                        +e.P.text Да, по нему можно пройти! <br> Если вы осмелитесь, конечно
+                +b.cause-remaining
+                    each item in causeList
+                        +b.cause-block
+                            +e.title=item.title
+                            +e.number=item.number
+                            +e.content=item.content
+            +b.hotel
+                +b.hotel-block
+                    +e.H3.title ЗАИНТЕРЕСОВАЛИСЬ?
+                    +e.P.subtitle Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в седоне
+                    +e.BUTTON(type="button").button Найти гостиницу
+        +b.map
+            +b.map-block
+                +e.IFRAME(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209540.70924160766!2d-111.93521836093215!3d34.85437839969334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1541168200835" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+        +b.container
+            +b.page-footer
+                +b.footer-block
+                    +b.footer-contacts
+                        +e.B.title #VISITSEDONA
+                    +b.footer-social
+                        +e.UL.items
+                            each item in socialList
+                                +e.LI.item
+                                    +e.A(href="#")
+                                        +e.IMG(src="/img/" + item.img).img
+                    +b.footer-copyright
+                        +e.UL.items
+                            +e.LI.item.copyright-item--position
+                                +e.A(href="#").link Разработано
+                            +e.LI.item
+                                +e.IMG(src="/img/htmlacademy.png").image
